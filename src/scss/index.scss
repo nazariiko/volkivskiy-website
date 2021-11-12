@@ -1,0 +1,29 @@
+@import './loader.scss';
+
+p::-moz-selection,
+span::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+h4::-moz-selection,
+h5::-moz-selection,
+h6::-moz-selection,
+li::-moz-selection,
+button::-moz-selection {
+  color: white;
+  background: black;
+}
+
+p::selection,
+span::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+li::selection,
+button::selection {
+  color: white;
+  background: black;
+}

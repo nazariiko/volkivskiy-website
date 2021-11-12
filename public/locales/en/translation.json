@@ -1,0 +1,41 @@
+{
+  "name": "Mykola",
+  "surname": "Volkivskyi",
+  "burger menu": "Menu",
+  "personal blog": "personal blog",
+  "about info": {
+    "part1": "Ukrainian political scientist, public figure, poet.",
+    "part2": "President of the First International Fund for the Development of Ukraine.",
+    "part3": "Advisor to People's Deputies for 3 convocations of the Supreme Council of Ukraine"
+  },
+  "navigation items" : {
+    "item1": "Home",
+    "item2": "Blog",
+    "item3": "Poems",
+    "item4": "Biography"
+  },
+  "write me": "Write me",
+  "fullName": "Volkivskyi Mykola Anatolevich",
+  "birthday": "2 april 1994",
+  "city": "Korosten",
+  "biography": {
+    "promo info": "Ukrainian political scientist, public figure, poet, president of the First International Development Fund of Ukraine. Adviser to People's Deputies during 3 convocations of the Verkhovna Rada of Ukraine (from 19 years old).",
+    "activity": "Activity",
+    "activity info": "Editor-in-Chief of the magazine «Our People - Made in UA». Regular spokesman at the «School of Assistant People's Deputy», «First Ukrainian Academy of Politics», «UN Model: KNTEU», demonstration intellectual game «UN Model: KNTEU - 2018» and others. All of them are aimed at working with young people and aim to achieve political awareness, as well as help to develop critical thinking. Winner of the rating «Pride of the City - 2014» Korosten (Zhytomyr region) in the nomination «Opening of the Year». President of the International Fund for the European Union, whose activities are focused on establishing international contacts and helping compatriots abroad who are forced to travel in search of jobs. In 2011 he became a finalist in the game «The smartest».",
+    "international expereince": "International experience",
+    "expereince": "Experience",
+    "expereince info": "In 2015, he took part in the celebrations on the occasion of the 70th anniversary of the memory of those killed in World War II at the memorial complex «Monument to the Heroes of Westerplatte». In 2016, he participated in the Athens Democracy Forum (New York Times). Participant of the NATO Brussels Summit 2017 - the 28th Summit of the Heads of State and Government of the North Atlantic Treaty Organization, which took place on 25-26 May 2017 in Brussels at the new NATO Headquarters. In 2021, Nicholas was invited to the US-Russia Summit Geneva. He has repeatedly participated in the Warsaw Security Forum 2015, 2016, 2017, 2018, 2019, 2020 (online), 2021.",
+    "expereince info2": "At the invitation of the American side was a participant in the «Ukrainian International Scholarship Meeting» Washington, DC, during the National Prayer Breakfast in Washington (2020). He was a speaker at World Information Transfer, Inc. - an organization with consultative status with the United Nations / ECOSOC, promoting health and the environment. Mykola Volkivskyi became accredited for the G20 summit in Rome in 2021.",
+    "science achievements": "Science achievements",
+    "science": "Science",
+    "science info": "He has published two co-authored monographs abroad (Poland, Germany) on the development of civil society in the post-covid era. Mykola Volkivsky's analytical articles on Russia's aggression against Ukraine have been repeatedly published in US publications - The Los Angeles Tribune, New York Business Journal, Medium and others. He received a certificate from Harvard University EDx on successful completion of the course «U.S. Public Policy: Social, Economic, and Foreign Policies ». In 2021 he became a fellow of the Kirkland Program (Warsaw) to test the results of his dissertation research.",
+    "science info2": "In 2015-2016, he studied at the University of Warsaw, majoring in European Studies. Co-author of the Draft Law No. 2448 of November 14, 2019 on Amendments to the Law of Ukraine “On Hunting and Hunting” (regarding changes in the procedure for registration of animals that are included in the state hunting fund).",
+    "rewards": "Rewards",
+    "reward1": "He was awarded the New Security Leader 2018 during the New Security Leaders Forum in Warsaw.",
+    "reward2": "Laureate of the Hero of Ukraine Serhiy Kemsky Award",
+    "reward3": "Winner of the rating «Pride of the City - 2014» Korosten in the nomination: «Opening of the Year»",
+    "art": "Art",
+    "poems": "Poems",
+    "art info": "Mykola Volkivskyi is the author of the poetry collection «The Penultimate Poet». Nominated for the «Poet of the Year» award in 2015 and 2016, according to stihi.ru"
+  }
+}
