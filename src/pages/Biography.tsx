@@ -43,6 +43,14 @@ const StyledPromoInfo = styled.div`
     padding: 0px;
   }
 
+  @media (max-height: 630px) {
+    margin-top: 80px !important;
+  }
+
+  @media (max-height: 540px) {
+    margin-top: 130px !important;
+  }
+
   h2 {
     font-weight: 300;
     font-size: 42px;
@@ -76,6 +84,10 @@ const StyledPromoInfo = styled.div`
     @media (max-width: 560px) {
       font-size: 18px;
     }
+
+    @media (max-height: 540px) {
+      margin-top: 30px !important;
+    }
   }
 `;
 
@@ -86,6 +98,10 @@ const StyledScrollDown = styled.div`
 
   @media (max-width: 560px) {
     bottom: 70px;
+  }
+
+  @media (max-height: 540px) {
+    display: none;
   }
 `;
 
@@ -505,7 +521,7 @@ const Biography = () => {
   return (
     <StyledBiography id="promo">
       <Loader visible={isLoading} />
-      <Header />
+      <Header page={'biography'} />
       <StyledFirstWindow>
         <StyledPromoInfo>
           <h2>{t('fullName')}</h2>

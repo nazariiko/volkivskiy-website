@@ -3,8 +3,13 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
-import Logo from './logoBiography/Logo';
+import LogoBiography from './logoBiography/Logo';
+import LogoPoems from './logoPoems/Logo';
 import Menu from './Menu';
+
+interface IHeaderProps {
+  page: 'biography' | 'poems' | 'blog';
+}
 
 const StyledHeader = styled.div`
   display: flex;
@@ -69,7 +74,7 @@ const StyledBurgerMenu = styled.div`
   }
 `;
 
-const Header = () => {
+const Header: React.FC<IHeaderProps> = ({ page }) => {
   const [loadingMenuStatus, setLoadingMenuStatus] = React.useState<
     'hidden' | 'loading' | 'visible'
   >('hidden');
@@ -89,6 +94,15 @@ const Header = () => {
     }, 400);
   };
 
+  const renderLogo = (page: string) => {
+    switch (page) {
+      case 'biography':
+        return <LogoBiography />;
+      case 'poems':
+        return <LogoPoems />;
+    }
+  };
+
   return (
     <StyledHeader>
       {loadingMenuStatus === 'visible' || loadingMenuStatus === 'loading' ? (
@@ -100,7 +114,7 @@ const Header = () => {
 
       <div className="logo">
         <Link to="promo" smooth={true} duration={1000}>
-          <Logo />
+          {renderLogo(page)}
         </Link>
       </div>
 

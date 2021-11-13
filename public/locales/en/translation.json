@@ -37,5 +37,8 @@
     "art": "Art",
     "poems": "Poems",
     "art info": "Mykola Volkivskyi is the author of the poetry collection «The Penultimate Poet». Nominated for the «Poet of the Year» award in 2015 and 2016, according to stihi.ru"
+  },
+  "poems": {
+    "all poems": "All poems"
   }
 }
