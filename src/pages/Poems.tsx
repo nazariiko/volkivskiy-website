@@ -1,7 +1,7 @@
 import React from 'react';
-// import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Loader from '../components/Loader';
 import { useTypedSelector } from '../hooks/useTypedSelector';
@@ -21,6 +21,7 @@ const StyledListOfPoems = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 80px;
+  margin-bottom: 80px;
 
   a {
     text-decoration: none;
@@ -32,12 +33,34 @@ const StyledListOfPoems = styled.div`
       color: #000000;
       margin-bottom: 20px;
     }
+
+    p.visited {
+      color: #ff8652;
+    }
   }
 `;
 
 const Poems = () => {
   const { poems, loading } = useTypedSelector((state) => state.poems);
-  // const { t } = useTranslation();
+
+  const setToLocalStorage = (id: string) => {
+    if (localStorage.getItem('visited_poems') === null) {
+      localStorage.setItem('visited_poems', JSON.stringify([id]));
+    } else {
+      let visitedPoemsStringified = localStorage.getItem('visited_poems');
+      let visitedPoemsParsed = JSON.parse(visitedPoemsStringified as string);
+      if (!visitedPoemsParsed.includes(id)) {
+        visitedPoemsParsed.push(id);
+        localStorage.setItem('visited_poems', JSON.stringify(visitedPoemsParsed));
+      }
+    }
+  };
+
+  const checkIsInLocalStorage = (id: string) => {
+    let visitedPoemsStringified = localStorage.getItem('visited_poems');
+    let visitedPoemsParsed = JSON.parse(visitedPoemsStringified as string);
+    return visitedPoemsParsed?.includes(id);
+  };
 
   return (
     <StyledPoems>
@@ -48,11 +71,16 @@ const Poems = () => {
           {poems &&
             poems.map((poem, index) => (
               <Link to={`/poems/${poem.id}`} key={index}>
-                <p>{poem.name}</p>
+                <p
+                  className={`${checkIsInLocalStorage(poem.id) ? 'visited' : ''}`}
+                  onClick={() => setToLocalStorage(poem.id)}>
+                  {poem.name}
+                </p>
               </Link>
             ))}
         </StyledListOfPoems>
       </StyledListOfPoemsWindow>
+      <Footer />
     </StyledPoems>
   );
 };

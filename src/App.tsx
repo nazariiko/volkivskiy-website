@@ -10,6 +10,8 @@ import { Page } from './redux/types/page';
 import Poems from './pages/Poems';
 import { fetchPoems } from './redux/action-creators/poems';
 import Poem from './components/Poem';
+import ScrollToTop from './components/ScrollToTop';
+import { PoemsActionTypes } from './redux/types/poems';
 
 const StyledApp = styled.div`
   width: 100%;
@@ -20,7 +22,13 @@ const App: React.FC = () => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    dispatch(fetchPoems());
+    if (localStorage.getItem('poems') === null) {
+      dispatch(fetchPoems());
+    } else {
+      let poemsStringified = localStorage.getItem('poems');
+      let poemsParsed = JSON.parse(poemsStringified as string);
+      dispatch({ type: PoemsActionTypes.FETCH_POEMS_SUCCESS, payload: poemsParsed });
+    }
   }, [dispatch]);
 
   React.useEffect(() => {
@@ -29,6 +37,7 @@ const App: React.FC = () => {
 
   return (
     <StyledApp>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/biography" element={<Biography />} />

@@ -10,7 +10,8 @@ import bioImg1 from '../assets/images/biography1.jpg';
 import bioImg2 from '../assets/images/biography2.jpg';
 import Button from '../components/Button';
 import Footer from '../components/Footer';
-import { Link } from 'react-scroll';
+import { Link as LinkScroll } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const StyledBiography = styled.div``;
 
@@ -489,6 +490,10 @@ const StyledArt = styled.div`
     padding: 0px;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .poems-button {
     width: 200px;
   }
@@ -530,7 +535,7 @@ const Biography = () => {
           <p>{t('biography.promo info')}</p>
         </StyledPromoInfo>
         <StyledScrollDown>
-          <Link to="activity" smooth={true} duration={1000} offset={-100}>
+          <LinkScroll to="activity" smooth={true} duration={1000} offset={-100}>
             <svg
               width="39"
               height="21"
@@ -540,7 +545,7 @@ const Biography = () => {
               <line x1="19.9919" y1="20.0263" x2="0.64645" y2="0.68083" stroke="black" />
               <line x1="19.9919" y1="19.3192" x2="38.6465" y2="0.66463" stroke="black" />
             </svg>
-          </Link>
+          </LinkScroll>
         </StyledScrollDown>
       </StyledFirstWindow>
 
@@ -601,7 +606,9 @@ const Biography = () => {
         <StyledArt>
           <ContentSeparator text={t('biography.art')} />
           <p>{t('biography.art info')}</p>
-          <Button className="poems-button">{t('biography.poems')}</Button>
+          <Link to="/poems">
+            <Button className="poems-button">{t('biography.poems')}</Button>
+          </Link>
         </StyledArt>
         <div className="backgroundText">
           <span>{t('biography.poems')}</span>

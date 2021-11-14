@@ -82,12 +82,16 @@ const Poem: React.FC = () => {
       <StyledPoemWindow>
         <StyledPoemContent>
           <div>
-            <img
-              src={poem?.image.imageUrl}
-              alt="for poem"
-              height={poem?.image.height}
-              width={poem?.image.width}
-            />
+            {poem?.image.imageUrl !== 'https://stihi.ruundefined' ? (
+              <img
+                src={poem?.image.imageUrl}
+                alt="for poem"
+                height={poem?.image.height}
+                width={poem?.image.width}
+              />
+            ) : (
+              ''
+            )}
           </div>
           <h1>{poem?.name}</h1>
           <p>{poem?.text[0]}</p>
