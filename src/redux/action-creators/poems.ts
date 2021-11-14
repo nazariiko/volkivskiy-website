@@ -2,6 +2,7 @@ import axios from 'axios';
 import { Dispatch } from 'redux';
 import { PoemsAction, PoemsActionTypes } from '../types/poems';
 
+// Function doesn't use
 export const fetchPoems = () => {
   return async (dispatch: Dispatch<PoemsAction>) => {
     try {
