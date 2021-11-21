@@ -40,5 +40,8 @@
   },
   "poems": {
     "all poems": "All poems"
+  },
+  "blog": {
+    "read": "Read"
   }
 }

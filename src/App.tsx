@@ -12,6 +12,7 @@ import Poem from './components/Poem';
 import ScrollToTop from './components/ScrollToTop';
 import { PoemsActionTypes } from './redux/types/poems';
 import { poems } from './data/poems';
+import Blog from './pages/Blog';
 
 const StyledApp = styled.div`
   width: 100%;
@@ -35,6 +36,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/biography" element={<Biography />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/poems" element={<Poems />} />
         <Route path="/poems/:id" element={<Poem />} />
       </Routes>
