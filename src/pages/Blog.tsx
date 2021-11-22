@@ -30,7 +30,7 @@ const Blog = () => {
   return (
     <StyledBlog>
       <Loader visible={isLoading} />
-      <Header page={'poems'} />
+      <Header page={'blog'} />
       <StyledBlogList>
         {blogs &&
           blogs.map((blog, index) => (

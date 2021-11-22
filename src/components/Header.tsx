@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 
 import LogoBiography from './logoBiography/Logo';
 import LogoPoems from './logoPoems/Logo';
+import LogoBlog from './logoBlog/Logo';
 import Menu from './Menu';
 
 interface IHeaderProps {
@@ -100,6 +101,8 @@ const Header: React.FC<IHeaderProps> = ({ page }) => {
         return <LogoBiography />;
       case 'poems':
         return <LogoPoems />;
+      case 'blog':
+        return <LogoBlog />;
     }
   };
 

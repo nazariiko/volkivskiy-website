@@ -3,7 +3,7 @@ import { useWindowSize } from '../../hooks/useWindowSize';
 import LogoDesktop from './LogoDesktop';
 import LogoMobile from './LogoMobile';
 
-const LogoBiography = () => {
+const LogoBlog = () => {
   const { width } = useWindowSize();
 
   if (width && width > 560) {
@@ -13,4 +13,4 @@ const LogoBiography = () => {
   }
 };
 
-export default LogoBiography;
+export default LogoBlog;
