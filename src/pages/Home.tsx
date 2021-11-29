@@ -130,6 +130,10 @@ const StyledBurgerMenuDesktop = styled.div`
   @media (max-width: 840px) {
     display: none;
   }
+
+  @media (max-height: 660px) {
+    right: 100px;
+  }
 `;
 
 const StyledBurgerMenuMobile = styled.div`
