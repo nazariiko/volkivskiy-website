@@ -117,6 +117,7 @@ const StyledBurgerMenuDesktop = styled.div`
   right: 50px;
   top: 50px;
   cursor: pointer;
+  z-index: 1000;
 
   svg {
     margin-bottom: 6px;
@@ -139,6 +140,7 @@ const StyledBurgerMenuMobile = styled.div`
   right: 50px;
   top: 50px;
   cursor: pointer;
+  z-index: 1000;
 
   @media (max-width: 450px) {
     right: 20px;
