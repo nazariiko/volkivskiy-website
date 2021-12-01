@@ -23,7 +23,7 @@ const StyledOverlay = styled.div`
   bottom: 0;
   right: 0;
   height: 100vh;
-  z-index: 1000;
+  z-index: 10000;
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
